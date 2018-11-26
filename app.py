@@ -1,6 +1,7 @@
 import pandas as pd
 from classes.position_earning import PositionEarning
 from classes.common_position import CommonPosition
+from classes.normalized_earning import NormalizedEarning
 
 if __name__ == '__main__':
     """ Initializes the Major League Soccer as default excel """
@@ -11,3 +12,5 @@ if __name__ == '__main__':
     # pe.display()
     # cp = CommonPosition(mls_data)
     # cp.display()
+    # ne = NormalizedEarning(mls_data)
+    # ne.display()
