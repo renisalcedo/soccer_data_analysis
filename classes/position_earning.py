@@ -8,10 +8,10 @@ class PositionEarning:
         self.player_salaries = pd.read_excel(self.dataset, "Player Salaries")
 
     def display(self):
+        """ Will display the data in a graph """
         data = self.set_values()
         averages = self.get_averages(data)
         positions = self.get_positions(data)
-        print(positions)
 
         # Set the size for the graph
         plt.figure(figsize=(20,10))
@@ -27,6 +27,7 @@ class PositionEarning:
         plt.show()
 
     def set_values(self):
+        """ Will create a dictionary of the data """
         data = {}
 
         for pos, comp in zip(self.player_salaries.Pos, self.player_salaries.Compensation):
@@ -40,6 +41,10 @@ class PositionEarning:
         return data
 
     def get_averages(self, data):
+        """ Will return the average of the data 
+        :type data: dict(str: [])
+        :rtype data: Array[str]
+        """
         averages = []
 
         for pos in data:
@@ -48,6 +53,10 @@ class PositionEarning:
         return averages
 
     def get_positions(self, data):
+        """ Will return the positions of the players
+        :type data: dict(str: [])
+        :rtype data: Array[str]
+        """
         positions = []
 
         for pos in data:
