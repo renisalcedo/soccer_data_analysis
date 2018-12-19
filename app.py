@@ -8,9 +8,9 @@ if __name__ == '__main__':
     excel_file = 'mls.xlsx'
     mls_data = pd.ExcelFile(excel_file)
 
-    # pe = PositionEarning(mls_data)
-    # pe.display()
-    # cp = CommonPosition(mls_data)
-    # cp.display()
-    # ne = NormalizedEarning(mls_data)
-    # ne.display()
+    pe = PositionEarning(mls_data)
+    pe.display()
+    cp = CommonPosition(mls_data)
+    cp.display()
+    ne = NormalizedEarning(mls_data)
+    ne.display()
